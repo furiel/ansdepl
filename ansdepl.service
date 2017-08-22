@@ -1,0 +1,11 @@
+[Unit]
+Description=Ansible deploy service
+After=network.target
+
+[Service]
+Type=idle
+Environment="HOSTNAME=%H"
+ExecStart=/usr/libexec/ansdepl/ansdepl.sh
+
+[Install]
+WantedBy=multi-user.target
