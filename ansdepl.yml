@@ -1,5 +1,9 @@
 ---
 - hosts: all
   tasks:
-    - name: test
-      command: echo "Hello world"
+  - name: test
+    command: echo "Hello world"
+
+  - file:
+      path: /tmp/sentinel.txt
+      state: touch
