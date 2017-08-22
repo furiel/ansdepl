@@ -13,3 +13,10 @@ while [[ $RESULT -ne 0 ]] && [ $COUNTER -lt 10 ]; do
   ansible-pull -p -U "$REPO_PATH" -d "$TMP_FILES" -i "localhost," -c local ansdepl.yml
   RESULT=$?
 done
+
+if [[ $RESULT -eq 11 ]];
+then
+  exit 1;
+else
+  exit 0;
+fi
