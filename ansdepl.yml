@@ -5,5 +5,7 @@
     command: echo "Hello world"
 
   - file:
-      path: /tmp/sentinel.txt
-      state: touch
+      path: /media/test
+      state: directory
+      owner: test
+      group: test
