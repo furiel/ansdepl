@@ -4,6 +4,13 @@
   - name: test
     command: echo "Hello world"
 
+  - copy:
+      src: ansdepl.sh
+      dest: /usr/libexec/ansdepl/ansdepl.sh
+      owner: root
+      group: root
+      mode: 0700
+
   - file:
       path: /media/test
       state: directory
@@ -14,4 +21,3 @@
       dest: /etc/default/grub
       regexp: 'GRUB_GFXMODE='
       line: 'GRUB_GFXMODE=800x600'
-
