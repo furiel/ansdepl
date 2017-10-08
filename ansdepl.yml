@@ -9,3 +9,9 @@
       state: directory
       owner: test
       group: test
+
+  - lineinfile:
+      dest: /etc/default/grub
+      regexp: 'GRUB_GFXMODE='
+      line: 'GRUB_GFXMODE=800x600'
+
